@@ -1,0 +1,12 @@
+codebase for help :- https://github.com/apna-college/Zoom
+https://socket.io/docs/v4/
+https://webrtc.org/getting-started/firebase-rtc-codelab
+
+
+reading Docs , 
+    Covering undamentals , Web rtc architecture
+    Technology  to be used.
+
+setup project 
+
+Setup database

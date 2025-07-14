@@ -1,0 +1,33 @@
+creating frontened setup with vite.
+    npm create vite@latest
+    npm intall
+    npm run dev
+
+
+in Backened setup   
+    we have to set 
+        "type" : "module"
+        to use modern export , import 
+
+
+export { Meeting }; --> to export multiple things , default se hum ek hi cheez export kr sakte hi
+
+
+User.find({username})  -> returns a list , while findone returns a single element. 
+
+
+
+
+//! Coding with  socket
+
+// cross origin error
+
+
+
+// frontened what matters most --> 
+    JS aata hi ki nhi , 
+    design , template ko CSS ki help se copy kr sakte ho ya nhi.
+
+
+CCSS -> JSX
+PreBuilt Material Ui components ko edit krke unhe use krna . 

@@ -1,0 +1,48 @@
+Sockets :- Sockets refer to network communication endpoints that enable real-time data exchange between clients (e.g., your Zoom app) and servers.
+    like a phone call in common language
+
+    Socket ;-> ip address + portnumber.
+    It is a one end of Communication. 
+
+Protocols :- communication rules.
+    TCP & UDP
+
+    TCP :- reliable , slow , connection-oriented
+    UDP -> fast , less reliable , connection-less
+
+
+WebRTC
+    https://webrtc.org/getting-started/firebase-rtc-codelab
+    Web Real Time Communication.
+
+        works on basis of UDP protocol.
+        data bidirecctional flow.
+
+QUes ? without WebRTC , agar build krna ho to kaisa hoga?
+    server pr do log request bhejenge, server communication krwane me help krega.
+
+    with WebRTC :- after a point it establishes a direct connection beteen client and server.
+
+
+
+how does it work?
+    1. signalling 
+        signalling server uses SDP Protocol. 
+    2. connecting
+        ICE(Interactive connecting ) protocol
+    2. securing
+        DLTS & SRTP protocol 
+        encryption &  decryption 
+    4. communicating
+
+
+Which APIs do need to know implementing WebRTC?
+As part of WebRTC , humare system already usko support krne wali apis , & functions hoti hi.
+1. MediaStream :- captures video from our phone through api
+2. RTCPeerConnection  :- creates Data channel to send. 
+3. RTCDataChannel :-  
+
+
+WebRTC Architecture.
+
+Socket.io

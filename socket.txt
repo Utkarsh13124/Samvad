@@ -1,0 +1,42 @@
+Global State Management
+  The code maintains three key data structures:
+
+    connections: Maps room paths to arrays of socket IDs (tracks who's in each room)
+    messages: Stores chat message history for each room
+    timeOnline: Records when each user connected
+
+
+CORE FUNCTIONALITY
+
+Room Joining (join-call)
+    When a user joins a call:
+
+    Adds their socket ID to the room's connection list
+    Records their join time
+    Notifies all existing users in the room about the new participant
+    Sends the complete chat history to the new user
+
+
+Chat Messages (chat-message)
+    When a user sends a chat message:
+
+    Finds which room the sender belongs to
+    Stores the message in that room's history
+    Broadcasts the message to all users in the room
+
+
+WebRTC Signaling (signal)
+    Handles peer-to-peer connection setup by relaying WebRTC signaling messages between users. This enables direct video/audio communication.
+
+
+User Disconnection (disconnect)
+    When a user leaves:
+
+    Calculates how long they were online
+    Finds their room and notifies other users they left
+    Removes them from the connections list
+    Cleans up empty rooms
+
+
+CORS Configuration
+    The server allows cross-origin requests from any domain with full credential support, making it accessible from web applications.
