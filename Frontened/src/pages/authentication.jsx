@@ -12,24 +12,24 @@ import Grid from "@mui/material/Grid";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-// import { AuthContext } from "../contexts/AuthContext";
+import { AuthContext } from "../contexts/AuthContext";
 import { Snackbar } from "@mui/material";
 
 
 const defaultTheme = createTheme();
 
 export default function Authentication() {
-  const [username, setUsername] = React.useState();
-  const [password, setPassword] = React.useState();
-  const [name, setName] = React.useState();
-  const [error, setError] = React.useState();
-  const [message, setMessage] = React.useState();
+  const [username, setUsername] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [error, setError] = React.useState("");
+  const [message, setMessage] = React.useState("");
 
   const [formState, setFormState] = React.useState(0); // 0 means login , 1 means signup. is used to give styling to currently selected field. Also toshow signup extra details. 
 
   const [open, setOpen] = React.useState(false); // for snackbar
 
-  const { handleRegister, handleLogin } = React.useContext(AuthContext);
+  const { handleRegister, handleLogin } = React.useContext(AuthContext); // using useContext
 
   let handleAuth = async () => {
     try {
@@ -53,18 +53,17 @@ export default function Authentication() {
     }
   };
 
+
+
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Grid container component="main" sx={{ height: "100vh" }}>
+      <Grid container component="main" sx={{ height: "100vh" , width:"100vw" }}>
         <CssBaseline />
         <Grid
-          item
-          xs={false}
-          sm={4}
-          md={7}
+          size={{ xs: false, sm: 4, md: 7 }}
           sx={{
             backgroundImage:
-              "url(https://source.unsplash.com/random?wallpapers)",
+              "url(https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
@@ -74,7 +73,13 @@ export default function Authentication() {
             backgroundPosition: "center",
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+
+        <Grid
+          size={{ xs: 12, sm: 8, md: 5 }}
+          component={Paper}
+          elevation={6}
+          square
+        >
           <Box
             sx={{
               my: 8,
@@ -113,9 +118,9 @@ export default function Authentication() {
                   margin="normal"
                   required
                   fullWidth
-                  id="username"
+                  id="name"
                   label="Full Name"
-                  name="username"
+                  name="name"
                   value={name}
                   autoFocus
                   onChange={(e) => setName(e.target.value)}

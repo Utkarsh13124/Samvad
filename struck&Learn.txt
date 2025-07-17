@@ -31,3 +31,11 @@ User.find({username})  -> returns a list , while findone returns a single elemen
 
 CCSS -> JSX
 PreBuilt Material Ui components ko edit krke unhe use krna . 
+
+
+UseContext()
+UseRef()
+
+
+Stun Server :- 
+    STUN servers are lightweight servers running on the public internet which return thee IPaddress of the requester's device.
