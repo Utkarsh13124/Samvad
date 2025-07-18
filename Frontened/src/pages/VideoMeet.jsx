@@ -481,7 +481,7 @@ export default function VideoMeetComponent() {
       ...prevMessages,
       { sender: sender, data: data },
     ]);
-    if (socketIdSender !== socketIdRef.current) {
+    if (socketIdSender !== socketIdRef.current) { // appending new message , when user is not sender.
       setNewMessages((prevNewMessages) => prevNewMessages + 1);
     }
   };

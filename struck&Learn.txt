@@ -55,3 +55,9 @@ Window.location.href  --> se hum current web address ko access kr sakte hi.
 
 
 // Implementing Chat mesage, Chat room
+
+Coonection error refused --> server broken
+
+
+High order security function --> 
+withAuth --> wrapping with with auth means --> isko excess krne ke liye we must be login.
