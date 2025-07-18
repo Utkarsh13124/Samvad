@@ -39,3 +39,19 @@ UseRef()
 
 Stun Server :- 
     STUN servers are lightweight servers running on the public internet which return thee IPaddress of the requester's device.
+
+
+
+Navigator property for  taking permission from user to use his video.
+
+
+Videomeet file
+
+
+Window.location.href  --> se hum current web address ko access kr sakte hi. 
+
+
+// Implementing Screen Share feature.
+
+
+// Implementing Chat mesage, Chat room
