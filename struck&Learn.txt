@@ -68,3 +68,9 @@ WebRTC & UDP me difference :-
     Data is less important like video call
 
     Data is important like chat message . --> Sockets , ServerSentiment
+
+
+// Got error in API endpoint , wrongly defined, so not taking request.
+how fix?
+    thunderclient se http request bhejo , 
+    

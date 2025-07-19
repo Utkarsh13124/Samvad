@@ -39,6 +39,45 @@ export default function History() {
     return `${day}/${month}/${year}`;
   };
 
+  //   return (
+  //     <div>
+  //       <IconButton
+  //         onClick={() => {
+  //           routeTo("/home");
+  //         }}
+  //       >
+  //         <HomeIcon />
+  //       </IconButton>
+  //       {meetings.length !== 0 ? (
+  //         meetings.map((e, i) => {
+  //           return (
+  //             <>
+  //               <Card key={i} variant="outlined">
+  //                 <CardContent>
+  //                   <Typography
+  //                     sx={{ fontSize: 14 }}
+  //                     color="text.secondary"
+  //                     gutterBottom
+  //                   >
+  //                     Code: {e.meetingCode}
+  //                   </Typography>
+
+  //                   <Typography sx={{ mb: 1.5 }} color="text.secondary">
+  //                     Date: {formatDate(e.date)}
+  //                   </Typography>
+  //                 </CardContent>
+  //               </Card>
+  //             </>
+  //           );
+  //         })
+  //       ) : (
+  //         <></>
+  //       )}
+  //     </div>
+  //   );
+  
+
+
   return (
     <div>
       <IconButton
@@ -48,30 +87,28 @@ export default function History() {
       >
         <HomeIcon />
       </IconButton>
-      {meetings.length !== 0 ? (
-        meetings.map((e, i) => {
-          return (
-            <>
-              <Card key={i} variant="outlined">
-                <CardContent>
-                  <Typography
-                    sx={{ fontSize: 14 }}
-                    color="text.secondary"
-                    gutterBottom
-                  >
-                    Code: {e.meetingCode}
-                  </Typography>
+      {meetings.length > 0 ? (
+        meetings.map((meeting, index) => (
+          <Card key={index} variant="outlined">
+            <CardContent>
+              <Typography
+                sx={{ fontSize: 14 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                Code: {meeting.meetingCode}
+              </Typography>
 
-                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    Date: {formatDate(e.date)}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </>
-          );
-        })
+              <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                Date: {formatDate(meeting.date)}
+              </Typography>
+            </CardContent>
+          </Card>
+        ))
       ) : (
-        <></>
+        <Typography variant="body1" sx={{ mt: 2, textAlign: "center" }}>
+          No meeting history available
+        </Typography>
       )}
     </div>
   );
