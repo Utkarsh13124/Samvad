@@ -61,3 +61,10 @@ Coonection error refused --> server broken
 
 High order security function --> 
 withAuth --> wrapping with with auth means --> isko excess krne ke liye we must be login.
+
+
+
+WebRTC & UDP me difference :- 
+    Data is less important like video call
+
+    Data is important like chat message . --> Sockets , ServerSentiment
